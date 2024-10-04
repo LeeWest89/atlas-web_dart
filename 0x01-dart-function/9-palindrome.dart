@@ -1,4 +1,4 @@
-// Return if String is a Plaindrome or not
+// Return if String is a Palindrome or not
 bool isPalindrome(String s) {
   int a = 0;
   int b = s.length - 1;

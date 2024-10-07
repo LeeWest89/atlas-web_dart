@@ -1,5 +1,5 @@
-import '2-get_user.dart';
+import '3-greet_user.dart';
 
 main() async {
-  getUser();
+  print(await loginUser());
 }

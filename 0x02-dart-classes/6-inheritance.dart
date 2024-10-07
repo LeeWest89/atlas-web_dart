@@ -35,8 +35,13 @@ class User extends Password {
     ));
   }
 
+  set userPassword(String value) {
+    password = value;
+    user_password = value;
+  }
+
   @override
   String toString() {
-    return ('User(id : $id ,name: $name, age: $age, height: $height, Password: ${isValid()})');
+    return ('User(id : $id ,name: $name, age: $age, height: $height, Password: ${isValid(user_password)})');
   }
 }

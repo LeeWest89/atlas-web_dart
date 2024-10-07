@@ -1,5 +1,6 @@
-import '3-greet_user.dart';
+import '4-get_sum.dart';
+
 
 main() async {
-  print(await loginUser());
+  print(await calculateTotal());
 }

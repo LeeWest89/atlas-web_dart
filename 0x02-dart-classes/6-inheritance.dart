@@ -1,4 +1,5 @@
 // creating a class with method that returns json object
+
 import '6-password.dart';
 
 class User extends Password {
@@ -14,7 +15,7 @@ class User extends Password {
         required this.age,
         required this.height,
         required this.user_password,
-  }) : super(password: user_password);
+      }) : super(password: user_password);
 
   Map toJson() {
     return ({
@@ -35,13 +36,10 @@ class User extends Password {
     ));
   }
 
-  set userPassword(String value) {
-    password = value;
-    user_password = value;
-  }
-
   @override
   String toString() {
-    return ('User(id : $id ,name: $name, age: $age, height: $height, Password: ${isValid(user_password)})');
+    final newPassword = new Password(password: this.user_password);
+
+    return ('User(id : $id ,name: $name, age: $age, height: $height, Password: ${newPassword.isValid()})');
   }
 }

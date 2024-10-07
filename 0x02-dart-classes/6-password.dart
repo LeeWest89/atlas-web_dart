@@ -5,7 +5,7 @@ class Password {
 
   // Constructor
   Password({required String password}) {
-    this.password = password;
+    _password = password;
   }
 
   // Setter
@@ -18,14 +18,14 @@ class Password {
     return (_password);
   }
 
-  bool isValid (String password) {
-    if (password.isEmpty || password.length < 8 || password.length > 16) {
+  bool isValid () {
+    if (_password.isEmpty || _password.length < 8 || _password.length > 16) {
       return (false);
     }
 
-    bool hasUpper = password.contains(RegExp('[A-Z]'));
-    bool hasLower = password.contains(RegExp('[a-z]'));
-    bool hasNum = password.contains(RegExp('[0-9]'));
+    bool hasUpper = _password.contains(RegExp('[A-Z]'));
+    bool hasLower = _password.contains(RegExp('[a-z]'));
+    bool hasNum = _password.contains(RegExp('[0-9]'));
 
     return (hasUpper && hasLower && hasNum);
   }

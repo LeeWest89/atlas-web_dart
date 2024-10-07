@@ -2,7 +2,7 @@
 import '4-util.dart';
 import 'dart:convert';
 
-Future<double> calculateTotal() async {
+Future<dynamic> calculateTotal() async {
   try {
     double totalPrice = 0.0;
 
